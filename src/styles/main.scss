@@ -1,4 +1,6 @@
+//  -----------------------------------------------------------------------------------
 // Includes
+//  -----------------------------------------------------------------------------------
 
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab:300');
 
@@ -6,17 +8,21 @@
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Slab', serif;
 
-
+//  -----------------------------------------------------------------------------------
 // Variables
+//  -----------------------------------------------------------------------------------
 
 $white: #f5f7fc;
-$black: #242424;
-$green: rgba(6,214,160, 0.6);
-$blue: rgba(2,128,144, 0.6);
+$black: #00171F;
+$blueDark: #003459;
+$blueMid: #007EA7;
+$blueLight: #00A8E8;
 
 $gutter: 35px;
 
+//  -----------------------------------------------------------------------------------
 // Global Styles
+//  -----------------------------------------------------------------------------------
 
 html, body {
 	background-color: $white;
@@ -24,6 +30,12 @@ html, body {
 
 h1, h2, h3 {
 	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+	font-size: 1.25em;
+	letter-spacing: .05em;
+	line-height: 1.25em;
 }
 
 p {
@@ -34,11 +46,11 @@ p {
 a {
 	color: inherit;
 	text-decoration: none;
-	background-image: linear-gradient(120deg, $green 0%, $blue 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.1em;
-  background-position: 0 100%;
-  transition: 0.15s ease-in;
+	background-image: linear-gradient(120deg, $blueMid 0%, $blueLight 100%);
+	background-repeat: no-repeat;
+	background-size: 100% 0.1em;
+	background-position: 0 100%;
+	transition: 0.15s ease-in;
 
   &:hover {
     color: inherit;
@@ -48,12 +60,21 @@ a {
 
 }
 
+//  -----------------------------------------------------------------------------------
 // Intro
+//  -----------------------------------------------------------------------------------
 
 #intro {
 
 	padding-top: $gutter;
+	padding-bottom: $gutter;
 	color: $black;
+
+	.wordmark {
+		padding-bottom: $gutter*.7;
+		max-width: 60px;
+		display: block;
+	}
 
 	.title {
 		font-family: 'Roboto Mono', monospace;
@@ -66,26 +87,67 @@ a {
 	}
 
 	h2 {
-		font-size: 1.25em;
-		letter-spacing: .05em;
-		line-height: 1.25em;
 		padding-bottom: $gutter/2;
 	}
 
 	p {
 		font-size: 1em;
 		opacity: .85;
+		padding-bottom: $gutter*1.5;
+	}
+
+	.resume {
+		font-family: 'Roboto Mono', monospace;
+		letter-spacing: .1em;
+		font-size: 1em;
+		text-transform: uppercase;
+		color: $white;
+		padding: $gutter/3 $gutter/2;
+		border-radius: 5px;
+		border: 0;
+		box-shadow: 0 4px 12px 0 rgba(152, 160, 180, .75);
+		background-image: linear-gradient(to right, $blueMid, $blueLight);
+		background-size: 150% 150%;
+		border-radius: 5px;
+		transition: 0.15s ease-in;
+
+		&:hover {
+			box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 1);
+		}
+
 	}
 
 }
 
+//  -----------------------------------------------------------------------------------
+// Portfolio Section
+//  -----------------------------------------------------------------------------------
+
+.portfolio {
+	padding-top: $gutter/1.5;
+	padding-bottom: $gutter;
+
+	img {
+		width: 100%;
+	}
+
+}
+
+.one {
+	padding-top: $gutter;
+	color: $white;
+	background-image: linear-gradient(120deg, $blueLight 0%, $blueMid 100%);
+}
+
+//  -----------------------------------------------------------------------------------
 // Media Queries
+//  -----------------------------------------------------------------------------------
 
 
 // > 576px
 @media (min-width: 576px) {
 
-	#intro > h2 {
+	h2 {
 		font-size: 1.35em;
 	}
 
@@ -93,12 +155,16 @@ a {
 		font-size: 1.15em;
 	}
 
+	#intro > .wordmark {
+		max-width: 80px;
+	}
+
 }
 
 // > 768px
 @media (min-width: 768px) {
 
-	#intro > h2 {
+	h2 {
 		font-size: 1.5em;
 	}
 
@@ -106,12 +172,16 @@ a {
 		font-size: 1.35em;
 	}
 
+	#intro > .wordmark {
+		max-width: 100px;
+	}
+
 }
 
 // > 992px
 @media (min-width: 992px) {
 
-	#intro > h2 {
+	h2 {
 		font-size: 1.75em;
 	}
 
@@ -119,12 +189,16 @@ a {
 		font-size: 1.5em;
 	}
 
+	#intro > .wordmark {
+		max-width: 120px;
+	}
+
 }
 
 // > 1200px
 @media (min-width: 1200px) {
 
-	#intro > h2 {
+	h2 {
 		font-size: 2em;
 	}
 
