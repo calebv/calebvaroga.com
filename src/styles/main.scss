@@ -93,7 +93,7 @@ a {
 	p {
 		font-size: 1em;
 		opacity: .85;
-		padding-bottom: $gutter*1.5;
+		padding-bottom: $gutter;
 	}
 
 	.resume {
@@ -124,7 +124,7 @@ a {
 //  -----------------------------------------------------------------------------------
 
 .portfolio {
-	padding-top: $gutter/1.5;
+	padding-top: $gutter/2.5;
 	padding-bottom: $gutter;
 
 	img {
