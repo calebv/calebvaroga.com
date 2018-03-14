@@ -14,9 +14,8 @@
 
 $white: #f5f7fc;
 $black: #00171F;
-$blueDark: #003459;
-$blueMid: #007EA7;
-$blueLight: #00A8E8;
+$colorOne: #252B37;
+$colorTwo: #0fffc1;
 
 $gutter: 35px;
 
@@ -46,7 +45,7 @@ p {
 a {
 	color: inherit;
 	text-decoration: none;
-	background-image: linear-gradient(120deg, $blueMid 0%, $blueLight 100%);
+	background-image: linear-gradient(120deg, $colorOne 0%, $colorTwo 100%);
 	background-repeat: no-repeat;
 	background-size: 100% 0.1em;
 	background-position: 0 100%;
@@ -106,13 +105,15 @@ a {
 		border-radius: 5px;
 		border: 0;
 		box-shadow: 0 4px 12px 0 rgba(152, 160, 180, .75);
-		background-image: linear-gradient(to right, $blueMid, $blueLight);
+		background-image: linear-gradient(90deg, $colorOne, $colorTwo);
 		background-size: 150% 150%;
 		border-radius: 5px;
-		transition: 0.15s ease-in;
+		transition: all 0.15s ease-in;
+		opacity: .7;
 
 		&:hover {
 			box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 1);
+			opacity: 1;
 		}
 
 	}
@@ -134,9 +135,8 @@ a {
 }
 
 .one {
-	padding-top: $gutter;
 	color: $white;
-	background-image: linear-gradient(120deg, $blueLight 0%, $blueMid 100%);
+	background-image: linear-gradient(90deg, $colorOne 0%, $colorTwo 100%);
 }
 
 //  -----------------------------------------------------------------------------------
