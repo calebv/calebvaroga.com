@@ -167,6 +167,10 @@ a {
 .noGradient {
 	padding-top: $gutter;
 	color: $black;
+
+	img {
+		box-shadow: none;
+	}
 }
 
 //  -----------------------------------------------------------------------------------
