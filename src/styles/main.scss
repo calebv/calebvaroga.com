@@ -52,16 +52,26 @@ p {
 a {
 	color: inherit;
 	text-decoration: none;
-	background-image: linear-gradient(160deg, $colorOne 0%, $colorTwo 100%);
-	background-repeat: no-repeat;
-	background-size: 100% 0.1em;
-	background-position: 0 100%;
-	transition: 0.15s ease-in;
+	border-bottom: none;
+	position: relative;
+
+	&::after {
+		content:'';
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		height: 2px;
+		background: $colorOne;
+		background: linear-gradient(to right, $colorOne, $colorTwo);
+		transition: all .35s ease-in;
+	}
+	
 
   &:hover {
     color: inherit;
     text-decoration: none;
-    background-size: 100% 100%;
+    font-weight: bold;
   }
 
 }
@@ -73,7 +83,7 @@ a {
 #intro {
 
 	padding-top: $gutter;
-	padding-bottom: $gutter;
+	padding-bottom: $gutter/2;
 	color: $black;
 
 	.wordmark {
@@ -99,7 +109,6 @@ a {
 	p {
 		font-size: 1em;
 		opacity: .85;
-		padding-bottom: $gutter;
 	}
 
 	.resume {
@@ -133,12 +142,11 @@ a {
 //  -----------------------------------------------------------------------------------
 
 .portfolio {
-	padding-top: $gutter/2.5;
 	padding-bottom: $gutter;
 
 	img {
 		width: 100%;
-		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35);
+		// box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35);
 	}
 
 	h3 {
@@ -173,10 +181,6 @@ a {
 .noGradient {
 	padding-top: $gutter;
 	color: $black;
-
-	img {
-		box-shadow: none;
-	}
 }
 
 //  -----------------------------------------------------------------------------------
