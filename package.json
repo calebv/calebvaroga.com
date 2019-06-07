@@ -16,7 +16,15 @@
 		"grunt-contrib-uglify": "^3.3.0",
 		"grunt-contrib-watch": "^1.1.0",
 		"grunt-sass": "^2.1.0",
-		"load-grunt-config": "^0.19.2"
+		"load-grunt-config": "^0.19.2",
+		"braces": ">=2.3.1",
+		"deep-extend": ">=0.5.1",
+		"randomatic": ">=3.0.0",
+		"extend": ">=3.0.2",
+		"lodash": ">=4.17.11",
+		"tar": ">=2.2.2",
+		"fstream": ">=1.0.12",
+		"tunnel-agent": ">=0.6.0"
 	},
 	"dependencies": {
 		"jshint-stylish": "^2.2.1",
