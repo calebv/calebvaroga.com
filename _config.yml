@@ -1,0 +1,11 @@
+# Site settings
+title: Caleb Varoga • Product Marketing Manager
+email: caleb.varoga@gmail.com
+author: Caleb Varoga
+description: Dance like no one is watching, encrypt like everyone is.
+url: https://www.calebvaroga.com
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
