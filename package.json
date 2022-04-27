@@ -8,7 +8,7 @@
 		"url": "https://github.com/calebv/calebvaroga.com.git"
 	},
 	"devDependencies": {
-		"grunt": "^1.0.4",
+		"grunt": "^1.5.2",
 		"grunt-concurrent": "^2.3.1",
 		"grunt-contrib-clean": "^1.1.0",
 		"grunt-contrib-imagemin": "^2.0.1",
